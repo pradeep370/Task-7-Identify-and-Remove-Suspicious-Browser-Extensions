@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Task 7 – Identify and Remove Suspicious Browser Extensions</title>
+  <style>
+    :root{
+      --bg: #0b1220;
+      --card: #121a2b;
+      --muted: #9fb0d0;
+      --text: #e7ecf6;
+      --accent: #5b9dff;
+      --accent-2: #7ef0d4;
+      --danger: #ff6b6b;
+      --warning: #ffd166;
+      --success: #00d39b;
+      --shadow: 0 10px 30px rgba(0,0,0,0.35);
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background:
+        radial-gradient(1200px 600px at 80% -10%, rgba(91,157,255,0.12), transparent 60%),
+        radial-gradient(1000px 500px at -20% 120%, rgba(126,240,212,0.10), transparent 60%),
+        var(--bg);
+      line-height: 1.6;
+    }
+    header{
+      text-align:center;
+      padding: 40px 16px 24px;
+    }
+    header h1{
+      margin:0 0 8px;
+      font-size: clamp(26px, 4vw, 40px);
+      letter-spacing: 0.3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    header .meta{
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .container{
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 16px 48px;
+    }
+    .grid{
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px 18px;
+      backdrop-filter: blur(6px);
+    }
+    .card h2{
+      margin: 0 0 10px;
+      font-size: 18px;
+      letter-spacing: .2px;
+    }
+    .card p, .card li{
+      color: #d3dcf0;
+    }
+    .span-12{ grid-column: span 12; }
+    .span-6{ grid-column: span 6; }
+    .span-4{ grid-column: span 4; }
+    @media (max-width: 900px){
+      .span-6, .span-4 { grid-column: span 12; }
+    }
+    .tag{
+      display:inline-block;
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+      color: var(--muted);
+      margin: 2px 6px 0 0;
+    }
+    .table-wrap{
+      overflow-x: auto;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    table{
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 720px;
+      background: #0e1627;
+    }
+    th, td{
+      padding: 12px 14px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      vertical-align: top;
+    }
+    th{
+      font-weight: 700;
+      color: #eaf2ff;
+      background: rgba(255,255,255,0.02);
+    }
+    tr:hover td{ background: rgba(255,255,255,0.02); }
+    .pill{
+      display:inline-block;
+      padding: 4px 8px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .3px;
+    }
+    .keep{ background: rgba(0,211,155,.15); color: #00d39b; }
+    .remove{ background: rgba(255,107,107,.15); color: #ff6b6b; }
+    .note{ color: var(--muted); font-size: 13px; }
+    footer{
+      text-align:center;
+      color: var(--muted);
+      font-size: 12px;
+      padding: 30px 0 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🛡️ Task 7 – Identify and Remove Suspicious Browser Extensions</h1>
+    <div class="meta">Date: 14 August 2025 • Submitted by: <strong>Pradeep S</strong></div>
+  </header>
+
+  <div class="container">
+    <div class="grid">
+      <section class="card span-12">
+        <h2>🎯 Objective</h2>
+        <p>Review all installed browser extensions, identify any that may pose security or privacy risks based on their permissions and trustworthiness, and take appropriate action (removal or retention) to maintain a secure browsing environment.</p>
+        <div class="tag">Security</div>
+        <div class="tag">Privacy</div>
+        <div class="tag">Extensions</div>
+      </section>
+
+      <section class="card span-6">
+        <h2>📌 Summary Objective</h2>
+        <p>Identify, evaluate, and remove potentially harmful browser extensions to improve browser security.</p>
+      </section>
+
+      <section class="card span-6">
+        <h2>🛠 Tools Used</h2>
+        <ul>
+          <li>Google Chrome</li>
+          <li>Extensions Manager</li>
+        </ul>
+      </section>
+
+      <section class="card span-12">
+        <h2>🔍 Steps Taken</h2>
+        <ol>
+          <li>Opened Firefox Extensions Manager.</li>
+          <li>Reviewed all installed extensions and their permissions.</li>
+          <li>Checked each extension's developer credibility and online reviews.</li>
+          <li>Identified extensions that may pose security/privacy risks.</li>
+          <li>Removed or disabled the suspicious extension.</li>
+          <li>Restarted the browser and verified extension list.</li>
+        </ol>
+      </section>
+
+      <section class="card span-12">
+        <h2>🚨 Extension Review</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Extension Name</th>
+                <th>Purpose</th>
+                <th>Risk Assessment</th>
+                <th>Action Taken</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Dark Reader</td>
+                <td>Enables dark mode on websites</td>
+                <td>Trusted and widely used</td>
+                <td><span class="pill keep">KEPT</span></td>
+              </tr>
+              <tr>
+                <td>Download Manager (S3)</td>
+                <td>Manage and download files</td>
+                <td>Requests broad permissions; similar tools have ads/tracking</td>
+                <td><span class="pill remove">REMOVED</span></td>
+              </tr>
+              <tr>
+                <td>Foxy Proxy</td>
+                <td>Proxy configuration tool</td>
+                <td>Safe if configured properly; requires network access</td>
+                <td><span class="pill keep">KEPT</span></td>
+              </tr>
+              <tr>
+                <td>SponsorBlock for YouTube</td>
+                <td>Skip sponsored segments on YouTube</td>
+                <td>Open-source and considered safe</td>
+                <td><span class="pill keep">KEPT</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card span-12">
+        <h2>🚨 Suspicious Extension Analysis – Download Manager (S3)</h2>
+        <p><strong>Purpose:</strong> Manage and organize downloads in the browser.</p>
+        <p><strong>Reason for Suspicion:</strong> Requests overly broad permissions that could be exploited for malicious purposes.</p>
+        <ul>
+          <li>Access data for all websites – Could read/alter sensitive info like passwords or bank data.</li>
+          <li>Download files &amp; modify history – Can track or manipulate downloads.</li>
+          <li>Open downloaded files – Risk of executing malicious content.</li>
+          <li>Access browsing history – Enables complete activity tracking.</li>
+          <li>Display notifications – Could send phishing-like popups.</li>
+          <li>Access browser tabs – Allows monitoring of all tabs and content.</li>
+        </ul>
+        <p><strong>Action Taken:</strong> Removed from browser to prevent potential misuse. <br/>
+           <strong>Risk Level:</strong> <span class="pill remove">HIGH</span></p>
+      </section>
+
+      <section class="card span-6">
+        <h2>✅ Trusted Extension Analysis – Dark Reader</h2>
+        <ul>
+          <li>Access data for all websites – Needed to change site colors; in malicious extensions, could alter or steal information.</li>
+          <li>Access browser tabs – Identifies which sites are open to apply styling; in malicious cases, could track browsing activity.</li>
+        </ul>
+        <p><strong>Action Taken:</strong> Kept installed – verified open-source and reputable. <br/>
+           <strong>Risk Level:</strong> <span class="pill keep">LOW</span></p>
+      </section>
+
+      <section class="card span-6">
+        <h2>✅ Trusted Extension Analysis – SponsorBlock for YouTube</h2>
+        <ul>
+          <li>Access data for youtube.com – Needed to read video timelines and skip sponsors.</li>
+          <li>Access data for SponsorBlock server – Stores and retrieves sponsor timestamps.</li>
+          <li>Access data for youtube-nocookie.com – Works for embedded privacy-mode videos.</li>
+        </ul>
+        <p><strong>Action Taken:</strong> Kept installed – open-source and reputable. <br/>
+           <strong>Risk Level:</strong> <span class="pill keep">LOW</span></p>
+      </section>
+
+      <section class="card span-12">
+        <h2>⚠️ Caution Extension Analysis – Foxy Proxy</h2>
+        <ul>
+          <li>Download files &amp; modify download history – Could track or alter downloads; likely minimal risk for a proxy tool.</li>
+          <li>Display notifications – Alerts user of proxy changes or errors.</li>
+          <li>Control browser proxy settings – Needed for proxy management; high-risk if extension or configured proxy is malicious.</li>
+          <li>Access browser tabs – Allows knowing which sites are open; could be abused for tracking.</li>
+        </ul>
+        <p><strong>Action Taken:</strong> Kept installed – verified source, proxies only from trusted providers. <br/>
+           <strong>Risk Level:</strong> <span class="pill">MEDIUM</span></p>
+      </section>
+
+      <section class="card span-12">
+        <h2>⚠️ Mitigate Risky Browser Extensions</h2>
+        <ol>
+          <li>Remove suspicious extensions that ask for too many permissions.</li>
+          <li>Install only from trusted sources and check reviews.</li>
+          <li>Review and update extensions regularly.</li>
+          <li>Limit permissions to what’s necessary.</li>
+          <li>Use separate browsers for sensitive work.</li>
+          <li>Watch for unusual activity and run antivirus scans.</li>
+        </ol>
+      </section>
+
+      <section class="card span-12">
+        <h2>📚 Key Learnings</h2>
+        <ul>
+          <li>Always verify the source before installing extensions.</li>
+          <li>Avoid granting unnecessary permissions.</li>
+          <li>Regularly review and remove unused extensions.</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 • Security Task 7 • README &amp; HTML generated for Pradeep S
+  </footer>
+</body>
+</html>
