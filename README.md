@@ -40,6 +40,8 @@ Identify, evaluate, and remove potentially harmful browser extensions to improve
 
 ## 🚨 Suspicious Extension Analysis – Download Manager (S3)
 
+<img width="1919" height="583" alt="Screenshot 2025-08-14 094856" src="https://github.com/user-attachments/assets/2e384a5e-5940-4c5e-a7f2-77381f6909e0" />
+
 **Purpose:** Manage and organize downloads in the browser.  
 **Reason for Suspicion:** Requests overly broad permissions that could be exploited for malicious purposes.
 
@@ -59,6 +61,8 @@ Identify, evaluate, and remove potentially harmful browser extensions to improve
 
 ## ✅ Trusted Extension Analysis – Dark Reader
 
+<img width="1919" height="611" alt="Screenshot 2025-08-14 094948" src="https://github.com/user-attachments/assets/e85e33dd-6718-492f-b078-78b7581ffa77" />
+
 **Purpose:** Enables dark mode on all websites to reduce eye strain and improve readability at night.  
 **Reason for Permissions:** Required to modify website styles in real-time and to know which tabs to apply changes to.
 
@@ -74,6 +78,8 @@ Identify, evaluate, and remove potentially harmful browser extensions to improve
 
 ## ✅ Trusted Extension Analysis – SponsorBlock for YouTube
 
+<img width="1919" height="713" alt="Screenshot 2025-08-14 095013" src="https://github.com/user-attachments/assets/0de92674-cfe1-4080-88c0-70a8cce69644" />
+
 **Purpose:** Automatically skips sponsorships, self-promotions, and other non-content segments in YouTube videos.
 
 **Reason for Permissions:**
@@ -88,6 +94,8 @@ Identify, evaluate, and remove potentially harmful browser extensions to improve
 ---
 
 ## ⚠️ Caution Extension Analysis – Foxy Proxy
+
+<img width="1919" height="713" alt="Screenshot 2025-08-14 102755" src="https://github.com/user-attachments/assets/eaea055e-d096-4040-bf61-1f628e5fbc2e" />
 
 **Purpose:** Advanced proxy management tool for switching between multiple proxies easily.
 
